@@ -20,6 +20,7 @@ type SendMessage struct {
 
 type FileData struct {
 	MessageType string //3:请求发送 4:同意接收 5:拒绝接收 6:发送数据
+	Sendername  string
 	Filename    string
 	Offset      string
 	Data        []byte
