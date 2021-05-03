@@ -18,8 +18,22 @@ type SendMessage struct {
 	Sendername  string
 }
 
-type FileData struct {
-	MessageType string //3:请求发送 4:同意接收 5:拒绝接收 6:发送数据
+type FileNotifyMessage struct {
+	MessageType string // "3"
+	Sendername  string
+	Filename    string
+	Length      string
+}
+
+type PullRequestMessage struct {
+	MessageType string // "4"
+	Sendername  string
+	Filename    string
+	Offset      string
+}
+
+type DataMessage struct {
+	MessageType string // "6"
 	Sendername  string
 	Filename    string
 	Offset      string
@@ -35,3 +49,11 @@ type ChatRequest struct {
 type LogoutRequest struct {
 	MessageType string // "8"
 }
+
+//type FileData struct {
+//	MessageType string //3:请求发送 4:同意接收 5:拒绝接收 6:发送数据
+//	Sendername  string
+//	Filename    string
+//	Offset      string
+//	Data        []byte
+//}
