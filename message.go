@@ -36,6 +36,7 @@ type DataMessage struct {
 	MessageType string // "6"
 	Sendername  string
 	Filename    string
+	Length      string
 	Offset      string
 	Data        []byte
 }
