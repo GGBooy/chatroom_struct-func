@@ -1,4 +1,4 @@
-package main
+package message
 
 type ReplyMessage struct {
 	MessageType string // "0"
