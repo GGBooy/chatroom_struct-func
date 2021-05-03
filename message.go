@@ -6,27 +6,31 @@ type ReplyMessage struct {
 	Err         string
 }
 
-type loginMessage struct {
+type LoginMessage struct {
 	MessageType string // "1"
 	Username    string
 	Password    string
 }
 
-type sendMessage struct {
+type SendMessage struct {
 	MessageType string // "2"
 	Message     string
 	Sendername  string
 }
 
-type fileData struct {
+type FileData struct {
 	MessageType string //3:请求发送 4:同意接收 5:拒绝接收 6:发送数据
 	Filename    string
 	Offset      string
 	Data        []byte
 }
 
-type chatRequest struct {
+type ChatRequest struct {
 	MessageType string // "7"
 	Mode        string
 	ID          string
+}
+
+type LogoutRequest struct {
+	MessageType string // "8"
 }
